@@ -79,7 +79,7 @@ namespace _30_practicum
         }
         public override string ToString()
         {
-            return $"Стоимость тиража: {CostOfCirculation()}. Количество листов: {NumberOfSheets}, стоимость одного листа: {CostPerSheet}, тираж: {Circulation}.";
+            return $"Название: {Title}, стоимость тиража: {CostOfCirculation()}. Количество листов: {NumberOfSheets}, стоимость одного листа: {CostPerSheet}, тираж: {Circulation}.";
         }
     }
 }

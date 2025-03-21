@@ -61,7 +61,7 @@ namespace _30_practicum
         }
         public override string ToString()
         {
-            return $"Стоимость тиража: {CostOfCirculation()}. Стоимость журнала: {Price}, тираж: {Circulation}.";
+            return $"Название: {Title}, стоимость тиража: {CostOfCirculation()}. Стоимость журнала: {Price}, тираж: {Circulation}.";
         }
     }   
 }
