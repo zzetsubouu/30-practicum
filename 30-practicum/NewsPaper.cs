@@ -73,6 +73,19 @@ namespace _30_practicum
                 }
             }
         }
+        public static NewsPaper Enter()
+        {
+            Console.Clear();
+            Console.Write("Введите название газеты: ");
+            string title = Console.ReadLine();
+            Console.Write("Введите количество листов: ");
+            int numOfSheets = int.Parse(Console.ReadLine());
+            Console.Write("Введите тираж: ");
+            int circulation = int.Parse(Console.ReadLine());
+            Console.Write("Введите стоимость листа: ");
+            double costPerSheet = int.Parse(Console.ReadLine());
+            return new NewsPaper(title, circulation,costPerSheet, numOfSheets);
+        }
         public override double CostOfCirculation()
         {
             return NumberOfSheets * CostPerSheet * Circulation;

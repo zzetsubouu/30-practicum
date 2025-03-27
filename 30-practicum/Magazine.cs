@@ -54,6 +54,17 @@ namespace _30_practicum
             Circulation = circulation;
             Price = price;
         }
+        public static Magazine Enter()
+        {
+            Console.Clear();
+            Console.Write("Введите название журнала: ");
+            string title = Console.ReadLine();
+            Console.Write("Введите тираж: ");
+            int circulation = int.Parse(Console.ReadLine());
+            Console.Write("Введите стоимость журнала: ");
+            double price = int.Parse(Console.ReadLine());
+            return new Magazine(title, circulation, price);
+        }
 
         public override double CostOfCirculation()
         {

@@ -10,10 +10,38 @@ namespace _30_practicum
     {
         static void Main(string[] args)
         {
-            var magazine1 = new Magazine("lololol", 1000, 10);
-            var newsPaper1 = new NewsPaper("bebebe", 10000, 0.1, 30);
-            Console.WriteLine(magazine1.ToString());
-            Console.WriteLine(newsPaper1.ToString());
+            List <PrintedProducts> printedProducts= new List<PrintedProducts>();
+            bool flag = true;
+            while (flag)
+            {
+                Console.Write("введите название печатной продукции (n или m, l для выхода): ");
+                string mark = Console.ReadLine();
+                switch (mark.ToLower())
+                {
+                    case "m":
+                    {
+                        printedProducts.Add(Magazine.Enter()); break;
+                    }
+                    case "n":
+                    {
+                        printedProducts.Add(NewsPaper.Enter()); break;
+                        }
+                    case "l":
+                    {
+                        Console.WriteLine("Завершение работы...");
+                        flag = false;
+                        break;
+                    }
+                    default:
+                    {
+                        Console.WriteLine("Нет такой печатной продукции."); break;
+                    }
+                }
+            }
+            foreach (var product in printedProducts)
+            {
+                Console.WriteLine(product.ToString());
+            }
             Console.ReadKey();
         }
     }

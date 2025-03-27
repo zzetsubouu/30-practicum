@@ -31,6 +31,7 @@ namespace _30_practicum
         {
             Title = title;
         }
+        //public abstract void Enter();
         public abstract double CostOfCirculation();
     }
 }
